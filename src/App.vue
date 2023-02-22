@@ -1,6 +1,20 @@
-<script></script>
+<script>
+import AppHeader from '@/components/AppHeader.vue';
+export default {
+    components: {
+        AppHeader,
+    },
+};
+</script>
 
-<template></template>
+<template>
+    <div id="app">
+        <AppHeader />
+        <div class="container mt3">
+            <router-view />
+        </div>
+    </div>
+</template>
 
 <style scoped>
 .page {
