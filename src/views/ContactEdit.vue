@@ -36,10 +36,10 @@ export default {
                 this.$router.push({
                     name: 'notfound',
                     params: {
-                        pathMatch: this.$router.path.split('/').slice(1),
+                        pathMatch: this.$route.path.split('/').slice(1),
                     },
-                    query: this.$router.query,
-                    hash: this.$router.hash,
+                    query: this.$route.query,
+                    hash: this.$route.hash,
                 });
             }
         },

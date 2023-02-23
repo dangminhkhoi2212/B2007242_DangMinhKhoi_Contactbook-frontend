@@ -27,8 +27,8 @@ export default {
             {{ contact.phone }}
         </div>
         <div class="p-1">
-            <strong>Liên hệ yêu thích: {{ contact.favorite }}</strong>
-            <i v-if="contact.favorite" class="fas fa-check"></i>
+            <strong>Liên hệ yêu thích: &nbsp; {{ contact.favorite }}</strong>
+            <i v-if="contact.favorite == true" class="fas fa-check"></i>
             <i v-else class="fas fa-times"></i>
         </div>
     </div>
