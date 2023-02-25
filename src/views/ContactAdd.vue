@@ -2,7 +2,6 @@
     <div class="page">
         <h4>Thêm liên hệ</h4>
         <ContactForm :contact="contact" @submit:contact="addContact" />
-        <p>{{ message }}</p>
     </div>
 </template>
 <script>
