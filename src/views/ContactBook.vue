@@ -119,7 +119,9 @@ export default {
             }
         },
         goToAddContact() {
-            this.$router.push('/contact.add');
+            this.$router.push({
+                name: 'contact.add',
+            });
         },
     },
     mounted() {

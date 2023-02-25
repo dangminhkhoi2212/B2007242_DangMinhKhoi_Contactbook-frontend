@@ -1,10 +1,9 @@
 import { createWebHistory, createRouter } from 'vue-router';
-import ContactBook from '@/views/ContactBook.vue';
 const routes = [
     {
         path: '/',
         name: 'contactbook',
-        component: ContactBook,
+        component: () => import('@/views/ContactBook.vue'),
     },
     {
         path: '/:pathMatch(.*)*',
@@ -16,6 +15,11 @@ const routes = [
         name: 'contact.edit',
         component: () => import('@/views/ContactEdit.vue'),
         props: true, // Truyền các biến trong $route.params vào làm props
+    },
+    {
+        path: '/contacts/add',
+        name: 'contact.add',
+        component: () => import('@/views/ContactAdd.vue'),
     },
 ];
 const router = createRouter({
